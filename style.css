@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* always consider only the max-width, bot adding padding to this number to get the real width */
+}
+
+body {
+    background-image: url(assets/Fundo.jpg);
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #121214;
+}
+
+body * {
+    font-family: 'Inter', sans-serif;
+    line-height: 160%;
+}
+
+header {
+    
+    margin: 30px;
+    
+    
+}
+
+header div {
+    display: block;
+    align-self: center; /* problem with horizontal aligning */
+}
+
+header img {
+    border-width: 5px; /* problem with showing the border */
+    border-radius: 50%;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50%, #F2D45C 100%);
+}
+
+main * { /* every element inside main */
+    /*border: 1px solid red;*/
+}
+
+main {
+    max-width: 580px;
+    /* every child component will follow this rule */
+    width: 90%;
+    margin: auto;
+
+    /* display: flex;
+    flex-direction: column; */
+    display: grid; /* also unlocks the 'gap' attribute, but without the need to set direction of display */
+    gap: 24px;
+
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+section {
+    color: white;
+
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50%, #F2D45C 100%);
+    padding-top: 4px; /* so it can appear on top of the card */
+    border-radius: 10px;
+}
+
+section div {
+    background-color: #2A2634;
+    padding: 32px; /* could also do padding on all four directions */
+    padding-top: 24px;
+    border-radius: 8px;
+    
+    /* border-top: 4px solid red; doesn't work on a gradient */
+}
+
+section h2 {
+    letter-spacing: -0.47px;
+}
+
+section p {
+    letter-spacing: -0.18px;
+    color: #A1A1AA;
+}
+
+section ul {
+    list-style: none;
+    display: flex; /* will keep a block display (exclusivity of the line for this element), but child components will present side-by-side */
+
+    flex-wrap: wrap; /* in case elements don't fit horizontally, they can be pushed down */
+
+    gap: 16px; /* only works for flex display (wouldn't make sense */
+    margin-top: 24px;
+}
+
+.games-list img {
+    width: 90px;
+    border-radius: 8px;
+}
+
+.channel-list img {
+    width: 70px;
+    border-radius: 50%; /*rounding*/
+}
+
